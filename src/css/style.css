@@ -25,3 +25,16 @@ input[type=search]:focus{
     border-color: white;
 }
 
+@media (max-width: 576px){
+    .form-control{
+        width: 80% !important;
+        margin-bottom: .5rem;
+    }
+    .btn-width{
+        width: 80% !important;
+    }
+    .container{
+        padding: 0 1rem;
+    }
+
+}
