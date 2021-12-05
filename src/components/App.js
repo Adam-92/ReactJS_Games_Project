@@ -1,4 +1,4 @@
-import {useState, useRef} from 'react'
+import {useState} from 'react'
 import {useGlobalContext} from './context/Context'
 import MyNavbar from './navbar/MyNavbar'
 import MyContainer from './container/MyContainer'
@@ -6,9 +6,7 @@ import MyContainer from './container/MyContainer'
 const App = () => {
   /* Use global context */
   const data = useGlobalContext()
-  /* Ref to input value from the MyNavbar*/
-  const inputRef = useRef(null)
-  /* inputValue */
+  /* InputValue */
   const [value,setValue] = useState('')
  
   return(

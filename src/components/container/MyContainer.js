@@ -4,6 +4,7 @@ import MyCard from "./MyCard";
 
 const MyContainer = ({ value }) => {
   const [data, setData] = useState([]);
+  const [selectedGames,setSelectedGames] = useState([])
   const [error, setError] = useState(false);
 
   const getGames = async () => {
@@ -33,38 +34,49 @@ const MyContainer = ({ value }) => {
     }
   };
 
+
   useEffect(() => {
     getGames();
   }, []);
 
-  console.log(value);
-  console.log(data.length);
+
   return (
     <Container>
-      {data !== [] &&
+
+    {data !== [] &&
         data.map((game, indx) => {
+        
+          let foundGames = 0;
+          let rows = Math.ceil(foundGames/3)
+
           if (game.title.includes(value)) {
+
             const id = game.id;
             const title = game.title;
             const img = game.thumbnail;
             const releaseDate = game.release_date;
             const developer = game.developer;
             const description = game.short_description
+            console.log(img)
+            foundGames++;
 
-            console.log(img, description);
             return (
-              <MyCard
-                key={indx}
-                id={id}
-                title={title}
-                img={img}
-                releaseDate={releaseDate}
-                developer={developer}
-                description={description}
-              />
+                <Row key={indx}>
+                    <Col >
+                        <MyCard
+                            id={id}
+                            title={title}
+                            img={img}
+                            releaseDate={releaseDate}
+                            developer={developer}
+                            description={description}
+                        />
+                    </Col>
+                </Row>
             );
           }
         })}
+  
     </Container>
   );
 };

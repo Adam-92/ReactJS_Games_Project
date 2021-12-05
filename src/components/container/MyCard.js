@@ -6,9 +6,9 @@ const MyCard = ({title,id, img,releaseDate,developer,description}) => {
             <Card.Img variant="top" img={img}/>
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
-                <Card.Subtitle className='my-2 '>{developer}</Card.Subtitle>
+                <Card.Subtitle className='my-2 text-muted'>{developer}</Card.Subtitle>
                 <Card.Text>{description}</Card.Text>
-                <Button variant='outline-warning'>Watch</Button>
+                <Button variant='outline-warning d-flex '>Watch</Button>
             </Card.Body>
         </Card>
     )
