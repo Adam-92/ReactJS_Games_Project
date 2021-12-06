@@ -1,18 +1,23 @@
-import {useState} from 'react'
-import {useGlobalContext} from './context/Context'
-import MyNavbar from './navbar/MyNavbar'
-import MyContainer from './container/MyContainer'
-
+import { Container,Col,Row } from 'react-bootstrap'
+import ResultTable from './ResultTable'
+import Pentagram from './Pentagram.js'
 const App = () => {
-  /* Use global context */
-  const data = useGlobalContext()
-  /* InputValue */
-  const [value,setValue] = useState('')
- 
+
   return(
     <>
-      <MyNavbar value={value} setValue={setValue} />
-      <MyContainer value={value} />
+      <Container>
+        <Row>
+          <Col sm={8} className=" offset-sm-2 mt-5">
+            <ResultTable />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Pentagram/>
+          </Col>
+        </Row>
+        
+      </Container>
     </>
   )
 

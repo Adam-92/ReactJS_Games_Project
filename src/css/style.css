@@ -1,40 +1,23 @@
-.my-btn{
-    color: red;
-    font-size: 1.5rem;
-    line-height: 10rem;
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.my-super-btn{
-    color: green;
-    padding: 1.5rem;
-    font-weight: bold;
-    border: none;
+html{
+    min-height: 100%;
+    background-image: radial-gradient(circle,hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
 
-.letter-spacing{
-    letter-spacing: 7px;
-    text-indent: 7px;
+body{
+   background-color: transparent;
+   color: white;
+   font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
-.size{
-    font-size: 6rem;
-}
-
-input[type=search]:focus{
-    box-shadow: 0px 0px 10px 0px rgb(59, 63, 59);
-    border-color: white;
-}
-
-@media (max-width: 576px){
-    .form-control{
-        width: 80% !important;
-        margin-bottom: .5rem;
-    }
-    .btn-width{
-        width: 80% !important;
-    }
-    .container{
-        padding: 0 1rem;
-    }
-
+.border-custom{
+    border: 2px solid rgba(255,255,255, 0.5);
+    border-radius: 1em;
 }
