@@ -3,23 +3,22 @@ import { Image } from 'react-bootstrap'
 import BgPentagon from '../images/BgPentagon.svg';
 /* Icon component */
 import Icon from './Icon'
-/* Icon SVG */
-import IconScissors from '../images/IconScissors.svg'
+/* All SVG icons */
+import CssIconSettings from './IconSettings';
+
 
 const Pentagram = () => {
-
-    const [iconsSVG, setIconsSVG] = useState([
-        {
-            name: IconScissors,
-            PositionTop: '',
-            PositionBottom: ''
-        }
-    ]);
-
+    
     return(
         <div className='position-relative'>
-            <Image src={BgPentagon} className="d-block mx-auto "alt="pentagon_pattern" fluid/>
-            <Icon iconSVG={iconsSVG[0].name} positon={iconsSVG[0].PositionTop}></Icon>
+            <Image src={BgPentagon} width="429" height="413" className="d-block mx-auto "alt="pentagon_pattern" fluid/>
+            
+            {CssIconSettings.map( (icon,index) => {
+                return(
+                    <Icon settings={icon} key={index}></Icon>
+                )   
+            })}
+            
         </div>
     )
 }

@@ -1,7 +1,6 @@
 import { Container,Col,Row } from 'react-bootstrap'
 import ResultTable from './ResultTable'
 import Pentagram from './Pentagram.js'
-import Icon from './Icon'
 
 const App = () => {
 
@@ -14,7 +13,7 @@ const App = () => {
           </Col>
         </Row>
         <Row>
-          <Col style={{marginTop: '10rem'}} >
+          <Col style={{marginTop: '6rem'}} >
             <Pentagram/>
           </Col>
         </Row>

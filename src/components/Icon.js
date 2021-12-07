@@ -2,17 +2,35 @@ import react from 'react'
 import { Image } from 'react-bootstrap'
 
 
-const Icon = ( {iconSVG, position} ) => {
+const Icon = ( {settings} ) => {
+    /* Icon SVG */
+    const svg = settings.svgImage;
+    /* CSS Icon settings  */
+    const translateX = settings.transform.translateX;
+    const boxShadowInset = settings.boxShadow.inset;
+    const boxShadowDefault = settings.boxShadow.default;
+    const borderColor = settings.borderColor;
+    const positionTop = settings.position.top;
+    const positionBottom = settings.position.bottom;
+    const positionLeft = settings.position.left;
+    const positionRight = settings.position.right;
 
-   const styleIcon = {
-       top: '-10%', 
-       left: '50%',
-       transform: 'translateX(-50%)',
-       border: '13px solid orange', 
-       borderRadius: '50%', 
-       width: '120px', 
-       height: '120px'
-    }
+    console.log(positionTop,positionBottom,positionLeft,positionRight)
+    
+    console.log(settings)
+    const styleIcon = 
+        {
+            top: `${positionTop}`, 
+            bottom: `${positionBottom}`,
+            left: `${positionLeft}`,
+            right: `${positionRight}`,
+            transform: `translateX(${translateX})`,
+            border: `20px solid ${borderColor}`,
+            borderRadius: '50%', 
+            width: '150px', 
+            height: '150px',
+            boxShadow: `${boxShadowDefault}`
+        }
 
     const styleIconBg = 
         {
@@ -20,13 +38,13 @@ const Icon = ( {iconSVG, position} ) => {
             width: '100%', 
             height: '100%',
             backgroundColor: 'rgba(255,255,250)',
-            boxShadow: 'inset 0px 12px 9px -6px rgba(206, 208, 208, 1)'
+            boxShadow: `${boxShadowInset}`
         }
    
    return(
        <div style={styleIcon} className='position-absolute'>
            <div style={styleIconBg}>
-               <Image src={iconSVG} className="d-block mx-auto py-3"/>
+               <Image src={svg} className="d-block mx-auto py-4"/>
            </div>
        </div>
    ) 
