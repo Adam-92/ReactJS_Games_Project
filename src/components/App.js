@@ -1,4 +1,4 @@
-import { Container,Col,Row } from 'react-bootstrap'
+import { Container,Col,Row,Button } from 'react-bootstrap'
 import ResultTable from './ResultTable'
 import Pentagram from './Pentagram.js'
 
@@ -15,6 +15,11 @@ const App = () => {
         <Row>
           <Col style={{marginTop: '6rem'}} >
             <Pentagram/>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={1} className="offset-5 mt-5 mt-sm-0 offset-sm-11">
+            <Button size='lg' className='btn-custom'>RULES</Button>
           </Col>
         </Row>
       </Container>
