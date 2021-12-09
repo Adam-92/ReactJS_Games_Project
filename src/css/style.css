@@ -18,6 +18,108 @@ body{
 }
 
 .border-custom{
-    border: 2px solid rgba(255,255,255, 0.5);
+    border: 3px solid rgba(255,255,255, 0.5);
     border-radius: 1em;
 }
+
+.scissors-icon{
+    position: absolute;
+    top: -6%;
+    left: 44%;
+    width: 11%; 
+    height: 23%;
+    box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px , rgb(187 128 19) 0px 12px 0px 20px;
+    outline: #ffc107 solid 22px;
+    background-color: rgba(255,255,250);
+    border-radius: 50%;
+}
+.lizard-icon{
+    position: absolute;
+    top: 73%;
+    left: 33%;
+    width: 11%; 
+    height: 23%;
+    box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px , hsl(261, 72%, 65%) 0px 12px 0px 20px;
+    outline: hsl(261, 58%, 53%) solid 22px;
+    background-color: rgba(255,255,250);
+    border-radius: 50%;
+}
+.rock-icon{
+    position: absolute;
+    top: 73%;
+    left: 58%;
+    width: 11%; 
+    height: 23%;
+    box-shadow: rgb(221 221 222) 0px 8px 0px -1px inset,hsl(349, 51%, 53%) 0px 12px 0px 20px;
+    outline: hsl(349, 71%, 52%) solid 22px;
+    background-color: rgba(255,255,250);
+    border-radius: 50%;
+}
+.spock-icon{
+    position: absolute;
+    top: 23%;
+    left: 26%;
+    width: 11%; 
+    height: 23%;
+    box-shadow: rgb(221 221 222) 0px 8px 0px -1px inset, hsl(209, 58%, 53%) 0px 12px 0px 20px;
+    outline: hsl(189, 59%, 53%) solid 22px;
+    background-color: rgba(255,255,250);
+    border-radius: 50%;
+}
+.paper-icon{
+    position: absolute;
+    top: 23%;
+    left: 62%;
+    width: 11%; 
+    height: 23%;
+    box-shadow: rgb(221 221 222) 0px 8px 0px -1px inset, hsl(230, 58%, 53%) 0px 12px 0px 20px;
+    outline: hsl(230, 89%, 62%) solid 22px;
+    background-color: rgba(255,255,250);
+    border-radius: 50%;
+}
+.size{
+    width: 45%;
+    height: 60%;
+}
+@media (max-width: 575px){
+
+    .size{
+        width: 75%;
+    }
+    .paper-icon{
+        left: 67%;
+        width: 20%;
+        height: 30%;
+        outline: hsl(230, 89%, 62%) solid 15px;
+        box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px, hsl(230, 58%, 53%) 0px 8px 0px 13px;
+    }
+    .lizard-icon{
+        left: 23%;
+        width: 20%;
+        height: 30%;
+        outline: hsl(261, 58%, 53%) solid 15px;
+        box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px, hsl(261, 72%, 65%) 0px 8px 0px 13px;
+    }
+    .rock-icon{
+        left: 61%;
+        width: 20%;
+        height: 30%;
+        outline: hsl(349, 71%, 52%) solid 15px;
+        box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px, hsl(349, 51%, 53%)0px 8px 0px 13px;
+    }
+    .scissors-icon{
+        left: 40%;
+        width: 20%;
+        height: 30%;
+        outline:  #ffc107 solid 15px;
+        box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px, rgb(187 128 19) 0px 8px 0px 13px;
+    }
+    .spock-icon{
+        left: 10%;
+        width: 20%;
+        height: 30%;
+        outline: hsl(189, 59%, 53%) solid 15px;
+        box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px, hsl(209, 58%, 53%) 0px 8px 0px 13px;
+    }
+}
+
