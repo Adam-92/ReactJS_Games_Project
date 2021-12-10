@@ -18,7 +18,7 @@ const App = () => {
           </Col>
         </Row>
         <Row>
-          <Col sm={1} className="offset-5 mt-5 mt-sm-0 offset-sm-11">
+          <Col sm={1} className="d-flex ms-sm-auto">
             <Button size='lg' className='btn-custom'>RULES</Button>
           </Col>
         </Row>

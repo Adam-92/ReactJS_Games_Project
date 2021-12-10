@@ -81,6 +81,13 @@ body{
     width: 45%;
     height: 60%;
 }
+.btn-custom{
+    padding: .6rem 3rem;
+    border: 2px solid rgba(255,255,255, 0.5);
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+}
+
 @media (max-width: 575px){
 
     .size{
@@ -120,6 +127,11 @@ body{
         height: 30%;
         outline: hsl(189, 59%, 53%) solid 15px;
         box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px, hsl(209, 58%, 53%) 0px 8px 0px 13px;
+    }
+    .btn-custom{
+        margin-top: 5rem;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
