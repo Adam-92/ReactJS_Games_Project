@@ -7,7 +7,6 @@
 }
 
 html{
-    min-height: 100%;
     background-image: radial-gradient(circle,hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
 
@@ -15,6 +14,14 @@ body{
    background-color: transparent;
    color: white;
    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+html,body {
+    height: 100%;
+}
+
+#root{
+    height: 100%;
 }
 
 .border-custom{
@@ -32,6 +39,7 @@ body{
     outline: #ffc107 solid 22px;
     background-color: rgba(255,255,250);
     border-radius: 50%;
+    cursor: pointer;
 }
 .lizard-icon{
     position: absolute;
@@ -43,6 +51,7 @@ body{
     outline: hsl(261, 58%, 53%) solid 22px;
     background-color: rgba(255,255,250);
     border-radius: 50%;
+    cursor: pointer;
 }
 .rock-icon{
     position: absolute;
@@ -54,6 +63,7 @@ body{
     outline: hsl(349, 71%, 52%) solid 22px;
     background-color: rgba(255,255,250);
     border-radius: 50%;
+    cursor: pointer;
 }
 .spock-icon{
     position: absolute;
@@ -65,6 +75,7 @@ body{
     outline: hsl(189, 59%, 53%) solid 22px;
     background-color: rgba(255,255,250);
     border-radius: 50%;
+    cursor: pointer;
 }
 .paper-icon{
     position: absolute;
@@ -76,22 +87,45 @@ body{
     outline: hsl(230, 89%, 62%) solid 22px;
     background-color: rgba(255,255,250);
     border-radius: 50%;
+    cursor: pointer;
 }
 .size{
     width: 45%;
     height: 60%;
 }
 .btn-custom{
-    padding: .6rem 3rem;
+    width: 100%;
     border: 2px solid rgba(255,255,255, 0.5);
     letter-spacing: 2px;
     font-size: 1.3rem;
 }
+.spacing{
+    letter-spacing: 1px;
+}
+.pick{
+    position: static;
+    width: 80%;
+    height: 60%;
+}
+.result{
+    font-size: calc(1rem + 3.3vw);
+    letter-spacing: 3px;
+}
+.margin-top-pentagram{
+    margin-top: 5rem;
+}
+.margin-top-challange{
+    margin-top: 5rem;
+}
+
 
 @media (max-width: 575px){
-
     .size{
         width: 75%;
+    }
+    .pick{
+        width: 80% !important;
+        height: 60% !important;
     }
     .paper-icon{
         left: 67%;
@@ -133,5 +167,8 @@ body{
         margin-right: auto;
         margin-left: auto;
     }
+
 }
+
+
 
