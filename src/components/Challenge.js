@@ -4,47 +4,48 @@ import {ReactComponent as IconRock }from '../images/IconRock.svg';
 import {ReactComponent as IconSpock} from '../images/IconSpock.svg';
 import {ReactComponent as IconScissors} from '../images/IconScissors.svg';
 import {Row, Col, Button} from 'react-bootstrap'
+import Logic from './Logic'
 
-const Challange = ({ yourPick, computerPick, selectPick }) =>{
 
-   console.log(yourPick)
+const Challange = ({ restartGame, yourPick, computerPick,result}) =>{
 
-    return(
+  
+   console.log(computerPick)
+   return(
       <Row>
          <Col xs={{span: 6, order: 1}} sm={{span: true,order: 1}} className='ms-sm-5'>
             <h3 className='text-center mb-5'>
                YOUR PICK
             </h3>  
-{/*             {yourPick === 'lizard-icon' &&
+            {yourPick === 'lizard-icon' &&
                <div className={`${yourPick} pick mx-auto`}>
-                  <IconLizard width='100%' height='100%' viewBox='-6 -18 80 100' />
+                  <IconLizard width='100%' height='100%' viewBox='-7 -14 80 88' />
                 </div>
             }
             {yourPick === 'spock-icon' &&
                <div className={`${yourPick} pick mx-auto`}>
-                  <IconSpock width='100%' height='100%' viewBox='-6 -18 80 100' />
+                  <IconSpock width='100%' height='100%' viewBox='-22 -10 80 80' />
                </div>
             }
             {yourPick === 'rock-icon' &&
                <div className={`${yourPick} pick mx-auto`}>
-                  <IconRock width='100%' height='100%' viewBox='-6 -18 80 100' />
+                  <IconRock width='100%' height='100%' viewBox='-15 -15 80 75' />
                </div>
             }
             {yourPick === 'scissors-icon' &&
                <div className={`${yourPick} pick mx-auto`}>
-                  <IconScissors width='100%' height='100%' viewBox='-6 -18 80 100' />
+                  <IconScissors width='100%' height='100%' viewBox='-14 -10 80 75' />
                </div>
             }
             {yourPick === 'paper-icon' &&
                <div className={`${yourPick} pick mx-auto`}>
-                  <IconPaper width='100%' height='100%' viewBox='-6 -18 80 100' />
+                  <IconPaper width='100%' height='100%' viewBox='-13 -9 80 75' />
                </div>
-            } */}
+            }
          </Col>
-
-         <Col xs={{order: 3}} sm={{span: true, order: 2}} className='d-flex flex-column justify-content-center align-items-center'>
-            <p className='result'>YOU WIN!</p>
-            <Button variant='light' className='fs-3 px-5' onClick={selectPick('')}>
+         <Col xs={{order: 3}} sm={{span: true, order: 2}} className='d-flex flex-column justify-content-center align-items-center mt-5 mt-sm-0'>
+            <p className='result'>{result}</p>
+            <Button variant='light' className='fs-3 px-5' onClick={restartGame} >
                PLAY AGAIN
             </Button>
          </Col>
@@ -52,9 +53,31 @@ const Challange = ({ yourPick, computerPick, selectPick }) =>{
             <h3 className='text-center mb-5'>
                COMPUTER PICK
             </h3>  
-            <div className="lizard-icon pick mx-auto">
-               <IconLizard width='100%' height='100%' viewBox='-6 -18 80 100' />
-            </div>
+            {computerPick === 1 && 
+               <div className="lizard-icon pick mx-auto">
+                  <IconLizard width='100%' height='100%' viewBox='-7 -14 80 88' />
+               </div>
+            }
+            {computerPick === 2 && 
+               <div className="scissors-icon pick mx-auto">
+                  <IconScissors width='100%' height='100%' viewBox='-14 -10 80 75' />
+               </div>
+            }
+            {computerPick === 3 && 
+               <div className="rock-icon pick mx-auto">
+                  <IconRock width='100%' height='100%' viewBox='-15 -15 80 75' />
+               </div>
+            }
+            {computerPick === 4 && 
+               <div className="spock-icon pick mx-auto">
+                  <IconSpock width='100%' height='100%' viewBox='-22 -10 80 80' />
+               </div>
+            }
+            {computerPick === 5 && 
+               <div className="paper-icon pick mx-auto">
+                  <IconPaper width='100%' height='100%' viewBox='-13 -9 80 75' />
+               </div>
+            }
          </Col>
       </Row>
     )

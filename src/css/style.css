@@ -105,7 +105,7 @@ html,body {
 .pick{
     position: static;
     width: 80%;
-    height: 60%;
+    height: 75%;
 }
 .result{
     font-size: calc(1rem + 3.3vw);
@@ -125,7 +125,7 @@ html,body {
     }
     .pick{
         width: 80% !important;
-        height: 60% !important;
+        height: 75% !important;
     }
     .paper-icon{
         left: 67%;

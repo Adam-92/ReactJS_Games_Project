@@ -1,3 +1,4 @@
+import React from 'react'
 import { Image } from 'react-bootstrap'
 import BgPentagon from '../images/BgPentagon.svg';
 /* All SVG icons */
@@ -7,7 +8,7 @@ import {ReactComponent as IconRock }from '../images/IconRock.svg';
 import {ReactComponent as IconSpock} from '../images/IconSpock.svg';
 import {ReactComponent as IconScissors} from '../images/IconScissors.svg';
 
-const Pentagram = ({selectPick}) => {
+const Pentagram = React.memo(({selectPick}) => {
     
     const selectYourPick = (e) => {
         const name = e.target.className;
@@ -34,6 +35,6 @@ const Pentagram = ({selectPick}) => {
                 </div>
         </div>
     )
-}
+})
 
 export default Pentagram

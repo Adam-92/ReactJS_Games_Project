@@ -1,22 +1,27 @@
-import {useState} from 'react'
+import React,{useState} from 'react'
 import { Container,Col,Row,Button} from 'react-bootstrap'
 import ResultTable from './ResultTable'
 import Pentagram from './Pentagram'
 import MyModal from './MyModal'
 import Challange from './Challenge'
-
+import Logic from './Logic'
 const App = () => {
 
   /* Control of the modal */
   const [modalShow, setModalShow] = useState(false)
   const modalOff = () => setModalShow(false)
   
-  /*Picks*/
+  /* Pick */
   const [yourPick, setYourPick] = useState('')
-  const [computerPick, setComputerPick] = useState('')
-  
+
+  /* Select Your Pick */
   const selectPick = (name) => setYourPick(name)
 
+   /* Restart Game */
+  const restartGame = () => setYourPick('');
+  
+  /* Logic */
+  const {computerPick, result} = Logic(yourPick)
 
   return(
     <>
@@ -27,7 +32,7 @@ const App = () => {
           </Col>
           {/* Display if the condition is met */}
           <Col xs={12} className={`${!yourPick && 'd-none'}`}>
-            <Challange selectPick={selectPick} yourPick={yourPick} computerPick={computerPick} />
+            <Challange restartGame={restartGame} yourPick={yourPick} computerPick={computerPick} result={result} />
           </Col>
           <Col xs={12} className={`mt-lg-5 ${yourPick && 'd-none'}`}>
             <Pentagram selectPick={selectPick}/>
@@ -43,33 +48,6 @@ const App = () => {
       </Container>
     </>
   )
-
-     {/* <Container>
-        <Row>
-          <Col sm={8} className="offset-sm-2 mt-5">
-            <ResultTable />
-          </Col>
-        </Row>
-        <Row>
-          <Col style={{marginTop: '6rem'}}>
-            {yourPick ? 
-              <Challange yourPick={yourPick} computerPick={computerPick} /> 
-                : 
-              <Pentagram/>}
-          </Col>
-        </Row>
-        <Row>
-          <Col className={`d-flex ${yourPick && 'margin'}`}>
-            <Button size='lg' 
-                    className='btn-custom ms-sm-auto' 
-                    onClick={()=>setModalShow(true)}>
-              RULES
-            </Button>
-          </Col>
-        </Row>
-        
-        <MyModal show={modalShow} onHide={modalOff}/>
-      </Container> */}  
 };
 
 export default App;

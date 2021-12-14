@@ -1,7 +1,15 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {Row,Col} from 'react-bootstrap'
+import Logic from './Logic'
 
 export default function ResultTable() {
+
+    /* Result */
+    const [points, setPoints] = useState(0)
+
+    const {result} = Logic()
+    console.log(result);
+
     return (
       <Row className="border-custom d-flex justify-content-between">
         <Col xs={8} className="py-3 ps-4">
@@ -22,7 +30,7 @@ export default function ResultTable() {
                        justify-content-center"
           >
             <p style={{ fontSize: '1.3rem', letterSpacing: '2px', color: 'hsl(229, 64%, 46%)'}}>SCORE</p>
-            <p style={{ fontSize: '4.2rem', lineHeight: '40%',  color: 'hsl(229, 25%, 44%)'}}>12</p>
+            <p style={{ fontSize: '4.2rem', lineHeight: '40%',  color: 'hsl(229, 25%, 44%)'}}>{points}</p>
           </div>
         </Col>
       </Row>
