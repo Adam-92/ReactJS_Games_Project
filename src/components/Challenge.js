@@ -4,13 +4,10 @@ import {ReactComponent as IconRock }from '../images/IconRock.svg';
 import {ReactComponent as IconSpock} from '../images/IconSpock.svg';
 import {ReactComponent as IconScissors} from '../images/IconScissors.svg';
 import {Row, Col, Button} from 'react-bootstrap'
-import Logic from './Logic'
 
+/* Shows the matchup  */
+const Challange = ({ restartGame, yourPick, computerPick, result}) =>{
 
-const Challange = ({ restartGame, yourPick, computerPick,result}) =>{
-
-  
-   console.log(computerPick)
    return(
       <Row>
          <Col xs={{span: 6, order: 1}} sm={{span: true,order: 1}} className='ms-sm-5'>

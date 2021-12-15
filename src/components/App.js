@@ -28,7 +28,7 @@ const App = () => {
       <Container fluid='xl' className='h-100'>
         <Row className='justify-content-around align-items-center h-100'>
           <Col sm={8} className='align-self-start align-self-sm-center mt-1 mt-sm-0'>
-            <ResultTable />
+            <ResultTable result={result}/>
           </Col>
           {/* Display if the condition is met */}
           <Col xs={12} className={`${!yourPick && 'd-none'}`}>

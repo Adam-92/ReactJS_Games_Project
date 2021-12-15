@@ -1,6 +1,7 @@
 import {Modal,Button} from 'react-bootstrap'
 import {ReactComponent as ImageRulesBonus} from '../images/ImageRulesBonus.svg'
 
+/* Explain the rules - Modal */
 const MyModal = ( props) => {
 
     return(

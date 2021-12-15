@@ -1,15 +1,20 @@
-import React,{useState} from 'react'
+import React, { useState, useEffect} from 'react'
 import {Row,Col} from 'react-bootstrap'
-import Logic from './Logic'
 
-export default function ResultTable() {
+const ResultTable = ( {result}) =>  {
 
-    /* Result */
+    /* Points */
     const [points, setPoints] = useState(0)
 
-    const {result} = Logic()
-    console.log(result);
+    /* Add points in case of win */
+    const addPoints = (result) => {
+     return (result === 'You Win!') ? setPoints(prev=>prev + 1) : null
+    }
 
+    useEffect(()=> {
+      addPoints(result)
+    }, [result])
+;
     return (
       <Row className="border-custom d-flex justify-content-between">
         <Col xs={8} className="py-3 ps-4">
@@ -36,3 +41,5 @@ export default function ResultTable() {
       </Row>
     );
 }
+
+export default ResultTable

@@ -1,15 +1,16 @@
 import React from 'react'
 import { Image } from 'react-bootstrap'
-import BgPentagon from '../images/BgPentagon.svg';
+import BgPentagon from '../images/BgPentagon.svg'
 /* All SVG icons */
-import {ReactComponent as IconLizard} from '../images/IconLizard.svg';
-import {ReactComponent as IconPaper} from '../images/IconPaper.svg'; 
-import {ReactComponent as IconRock }from '../images/IconRock.svg';
-import {ReactComponent as IconSpock} from '../images/IconSpock.svg';
-import {ReactComponent as IconScissors} from '../images/IconScissors.svg';
+import {ReactComponent as IconLizard} from '../images/IconLizard.svg'
+import {ReactComponent as IconPaper} from '../images/IconPaper.svg' 
+import {ReactComponent as IconRock }from '../images/IconRock.svg'
+import {ReactComponent as IconSpock} from '../images/IconSpock.svg'
+import {ReactComponent as IconScissors} from '../images/IconScissors.svg'
 
 const Pentagram = React.memo(({selectPick}) => {
     
+    /* Select you pick */
     const selectYourPick = (e) => {
         const name = e.target.className;
         selectPick(name)
