@@ -10,5 +10,6 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
 
 # Install && Start
 
-npm install 
+npm install
+
 npm start
