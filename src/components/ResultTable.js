@@ -19,7 +19,7 @@ const ResultTable = ( {result}) =>  {
       <Row className="border-custom d-flex justify-content-between">
         <Col xs={8} className="py-3 ps-4">
           <p style={{ lineHeight: '80%'}} className="m-0 fs-2">ROCK</p>
-          <p style={{ lineHeight: '80%'}} className="m-0 fs-2">PAP</p>
+          <p style={{ lineHeight: '80%'}} className="m-0 fs-2">PAPER</p>
           <p style={{ lineHeight: '80%'}} className="m-0 fs-2">SCISSORS</p>
           <p style={{ lineHeight: '80%'}} className="m-0 fs-2">LIZARD</p>
           <p style={{ lineHeight: '80%'}} className="m-0 fs-2">SPOCK</p>

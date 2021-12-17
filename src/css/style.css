@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
+/* - Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
+- Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
+- Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)
+- Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
+- Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%) */
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -36,7 +42,7 @@ html,body {
     width: 11%; 
     height: 23%;
     box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px , rgb(187 128 19) 0px 12px 0px 20px;
-    outline: #ffc107 solid 22px;
+    outline: hsl(40, 84%, 53%) solid 22px;
     background-color: rgba(255,255,250);
     border-radius: 50%;
     cursor: pointer;
@@ -47,8 +53,8 @@ html,body {
     left: 33%;
     width: 11%; 
     height: 23%;
-    box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px , hsl(261, 72%, 65%) 0px 12px 0px 20px;
-    outline: hsl(261, 58%, 53%) solid 22px;
+    box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px , hsl(261, 60%, 63%) 0px 12px 0px 20px;
+    outline:  hsl(261, 73%, 60%) solid 22px;
     background-color: rgba(255,255,250);
     border-radius: 50%;
     cursor: pointer;
@@ -59,8 +65,8 @@ html,body {
     left: 58%;
     width: 11%; 
     height: 23%;
-    box-shadow: rgb(221 221 222) 0px 8px 0px -1px inset,hsl(349, 51%, 53%) 0px 12px 0px 20px;
-    outline: hsl(349, 71%, 52%) solid 22px;
+    box-shadow: rgb(221 221 222) 0px 8px 0px -1px inset,hsl(349, 47%, 52%) 0px 12px 0px 20px;
+    outline: hsl(349, 70%, 56%) solid 22px;
     background-color: rgba(255,255,250);
     border-radius: 50%;
     cursor: pointer;
@@ -72,7 +78,7 @@ html,body {
     width: 11%; 
     height: 23%;
     box-shadow: rgb(221 221 222) 0px 8px 0px -1px inset, hsl(209, 58%, 53%) 0px 12px 0px 20px;
-    outline: hsl(189, 59%, 53%) solid 22px;
+    outline: hsl(189, 58%, 57%) solid 22px;
     background-color: rgba(255,255,250);
     border-radius: 50%;
     cursor: pointer;
@@ -84,7 +90,7 @@ html,body {
     width: 11%; 
     height: 23%;
     box-shadow: rgb(221 221 222) 0px 8px 0px -1px inset, hsl(230, 58%, 53%) 0px 12px 0px 20px;
-    outline: hsl(230, 89%, 62%) solid 22px;
+    outline: hsl(230, 89%, 65%) solid 22px;
     background-color: rgba(255,255,250);
     border-radius: 50%;
     cursor: pointer;
@@ -130,36 +136,36 @@ html,body {
     .paper-icon{
         left: 67%;
         width: 20%;
-        height: 30%;
-        outline: hsl(230, 89%, 62%) solid 15px;
-        box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px, hsl(230, 58%, 53%) 0px 8px 0px 13px;
+        height: 28%;
+        outline: hsl(230, 89%, 65%) solid 15px;
+        box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px, hsl(230, 60%, 53%) 0px 8px 0px 13px;
     }
     .lizard-icon{
         left: 23%;
         width: 20%;
-        height: 30%;
-        outline: hsl(261, 58%, 53%) solid 15px;
-        box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px, hsl(261, 72%, 65%) 0px 8px 0px 13px;
+        height: 28%;
+        outline: hsl(261, 73%, 60%) solid 15px;
+        box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px, hsl(261, 60%, 63%) 0px 8px 0px 13px;
     }
     .rock-icon{
         left: 61%;
         width: 20%;
-        height: 30%;
-        outline: hsl(349, 71%, 52%) solid 15px;
-        box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px, hsl(349, 51%, 53%)0px 8px 0px 13px;
+        height: 28%;
+        outline: hsl(349, 70%, 56%) solid 15px;
+        box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px, hsl(349, 45%, 52%) 0px 8px 0px 13px;
     }
     .scissors-icon{
         left: 40%;
         width: 20%;
-        height: 30%;
-        outline:  #ffc107 solid 15px;
+        height: 28%;
+        outline:  hsl(40, 84%, 53%) solid 15px;
         box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px, rgb(187 128 19) 0px 8px 0px 13px;
     }
     .spock-icon{
         left: 10%;
         width: 20%;
-        height: 30%;
-        outline: hsl(189, 59%, 53%) solid 15px;
+        height: 28%;
+        outline: hsl(189, 58%, 57%) solid 15px;
         box-shadow: inset rgb(221 221 222) 0px 8px 0px -1px, hsl(209, 58%, 53%) 0px 8px 0px 13px;
     }
     .btn-custom{
