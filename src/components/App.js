@@ -34,7 +34,7 @@ const App = () => {
           <Col xs={12} className={`${!yourPick && 'd-none'}`}>
             <Challange restartGame={restartGame} yourPick={yourPick} computerPick={computerPick} result={result} />
           </Col>
-          <Col xs={12} className={`mt-lg-5 ${yourPick && 'd-none'}`}>
+          <Col xs={12} className={`mt-lg-5 landscape ${yourPick && 'd-none'}`}>
             <Pentagram selectPick={selectPick}/>
           </Col>
           <Col xs={4} sm={3} className='mx-auto ms-lg-auto me-lg-0 mt-sm-5 mt-xxl-3'>
