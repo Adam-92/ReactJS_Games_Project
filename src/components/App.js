@@ -5,13 +5,14 @@ import Pentagram from './Pentagram'
 import MyModal from './MyModal'
 import Challange from './Challenge'
 import Logic from './Logic'
+
 const App = () => {
 
   /* Control of the modal */
   const [modalShow, setModalShow] = useState(false)
   const modalOff = () => setModalShow(false)
   
-  /* Pick */
+  /* Pick state*/
   const [yourPick, setYourPick] = useState('')
 
   /* Select Your Pick */
