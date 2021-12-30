@@ -7,34 +7,34 @@ import {Row, Col, Button} from 'react-bootstrap'
 
 /* Shows the matchup  */
 const Challange = ({ restartGame, yourPick, computerPick, result}) =>{
-
+   console.log(yourPick)
    return(
       <Row>
          <Col xs={{span: 6, order: 1}} sm={{span: true,order: 1}} className='ms-sm-5'>
             <h3 className='text-center mb-5'>
                YOUR PICK
             </h3>  
-            {yourPick === 'lizard-icon' &&
+            {yourPick.includes('lizard-icon') &&
                <div className={`${yourPick} pick mx-auto`}>
                   <IconLizard width='100%' height='100%' viewBox='-7 -14 80 88' />
                 </div>
             }
-            {yourPick === 'spock-icon' &&
+            {yourPick.includes('spock-icon') &&
                <div className={`${yourPick} pick mx-auto`}>
                   <IconSpock width='100%' height='100%' viewBox='-22 -10 80 80' />
                </div>
             }
-            {yourPick === 'rock-icon' &&
+            {yourPick.includes('rock-icon') &&
                <div className={`${yourPick} pick mx-auto`}>
                   <IconRock width='100%' height='100%' viewBox='-15 -15 80 75' />
                </div>
             }
-            {yourPick === 'scissors-icon' &&
+            {yourPick.includes('scissors-icon') &&
                <div className={`${yourPick} pick mx-auto`}>
                   <IconScissors width='100%' height='100%' viewBox='-14 -10 80 75' />
                </div>
             }
-            {yourPick === 'paper-icon' &&
+            {yourPick.includes('paper-icon') &&
                <div className={`${yourPick} pick mx-auto`}>
                   <IconPaper width='100%' height='100%' viewBox='-13 -9 80 75' />
                </div>
