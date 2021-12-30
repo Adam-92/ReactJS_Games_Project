@@ -7,7 +7,7 @@ import {Row, Col, Button} from 'react-bootstrap'
 
 /* Shows the matchup  */
 const Challange = ({ restartGame, yourPick, computerPick, result}) =>{
-   console.log(yourPick)
+   console.log(computerPick)
    return(
       <Row>
          <Col xs={{span: 6, order: 1}} sm={{span: true,order: 1}} className='ms-sm-5'>
@@ -51,12 +51,12 @@ const Challange = ({ restartGame, yourPick, computerPick, result}) =>{
                COMPUTER PICK
             </h3>  
             {computerPick === 1 && 
-               <div className="lizard-icon pick mx-auto">
+               <div className="lizard-icon pick mx-auto opacity-100">
                   <IconLizard width='100%' height='100%' viewBox='-7 -14 80 88' />
                </div>
             }
             {computerPick === 2 && 
-               <div className="scissors-icon pick mx-auto">
+               <div className="scissors-icon pick mx-auto opacity-100">
                   <IconScissors width='100%' height='100%' viewBox='-14 -10 80 75' />
                </div>
             }
