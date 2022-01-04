@@ -37,7 +37,7 @@ html,body {
 
 .scissors-icon{
     opacity: 0;
-    transition: all ease 5s;
+    transition: all ease 1s;
     position: absolute;
     top: -6%;
     left: 44%;
@@ -47,7 +47,7 @@ html,body {
     outline: hsl(40, 84%, 53%) solid 22px;
     background-color: rgba(255,255,250);
     border-radius: 50%;
-    cursor: pointer;
+    pointer-events: none;
 }
 .lizard-icon{
     opacity: 0;
@@ -61,7 +61,7 @@ html,body {
     outline:  hsl(261, 73%, 60%) solid 22px;
     background-color: rgba(255,255,250);
     border-radius: 50%;
-    cursor: pointer;
+    pointer-events: none;
 }
 .rock-icon{
     opacity: 0;
@@ -75,7 +75,7 @@ html,body {
     outline: hsl(349, 70%, 56%) solid 22px;
     background-color: rgba(255,255,250);
     border-radius: 50%;
-    cursor: pointer;
+    pointer-events: none;
 }
 .spock-icon{
     opacity: 0;
@@ -89,7 +89,7 @@ html,body {
     outline: hsl(189, 58%, 57%) solid 22px;
     background-color: rgba(255,255,250);
     border-radius: 50%;
-    cursor: pointer;
+    pointer-events: none;
 }
 .paper-icon{
     opacity: 0;
@@ -103,8 +103,13 @@ html,body {
     outline: hsl(230, 89%, 65%) solid 22px;
     background-color: rgba(255,255,250);
     border-radius: 50%;
-    cursor: pointer;
+    pointer-events: none;
 }
+.pointer{
+    cursor: pointer !important;
+    pointer-events: auto !important;
+}
+
 .size{
     opacity: 0;
     width: 45%;
@@ -125,8 +130,12 @@ html,body {
     height: 75%;
 }
 .result{
+    opacity: 0;
     font-size: calc(1rem + 3.3vw);
     letter-spacing: 3px;
+}
+.btn-restartGame{
+    opacity: 0;
 }
 .margin-top-pentagram{
     margin-top: 5rem;
