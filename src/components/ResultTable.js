@@ -13,9 +13,10 @@ const ResultTable = ( {result} ) =>  {
 
     useEffect(()=> {
        if(result === 'You Win!'){
-         setTimeout(()=>{
+        const timeout =  setTimeout(()=>{
           addPoints(result)
          },2000)
+         return ()=>clearTimeout(timeout)
        }
     }, [result])
 ;
