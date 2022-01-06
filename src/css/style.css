@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
-/* - Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
-- Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
-- Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)
-- Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
-- Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%) */
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -37,7 +31,6 @@ html,body {
 
 .scissors-icon{
     opacity: 0;
-    transition: all ease 1s;
     position: absolute;
     top: -6%;
     left: 44%;
@@ -51,7 +44,6 @@ html,body {
 }
 .lizard-icon{
     opacity: 0;
-    transition: all ease 1s;
     position: absolute;
     top: 73%;
     left: 33%;
@@ -65,7 +57,6 @@ html,body {
 }
 .rock-icon{
     opacity: 0;
-    transition: all ease 1s;
     position: absolute;
     top: 73%;
     left: 58%;
@@ -79,7 +70,6 @@ html,body {
 }
 .spock-icon{
     opacity: 0;
-    transition: all ease 1s;
     position: absolute;
     top: 23%;
     left: 26%;
@@ -93,7 +83,6 @@ html,body {
 }
 .paper-icon{
     opacity: 0;
-    transition: all ease 1s;
     position: absolute;
     top: 23%;
     left: 62%;
@@ -136,6 +125,7 @@ html,body {
 }
 .btn-restartGame{
     opacity: 0;
+    pointer-events: none;
 }
 .margin-top-pentagram{
     margin-top: 5rem;

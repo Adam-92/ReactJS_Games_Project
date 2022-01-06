@@ -69,14 +69,13 @@
 
   
 export  const challangePresentation = async (refMyPick,refComputerPick,refResult,refPlayAgain)  => {
-        /* Ref's to animation DOM's */
+        
+       /* Ref's to animation DOM's */
         const myPickDOM = refMyPick.current.nextSibling
         const computerPickDOM = refComputerPick.current.nextSibling;
         const resultDOM = refResult.current
         const playAgainDOM = refPlayAgain.current
- 
-        console.log(resultDOM);
-      
+    
         /* Create Promises for each pick */
         const myPick = (time) => new Promise( (resolve) => {
             setTimeout( () => {
@@ -120,8 +119,8 @@ export  const challangePresentation = async (refMyPick,refComputerPick,refResult
         const btnRestart = (time) => new Promise( (resolve) => {
             setTimeout( () => {
                 playAgainDOM.animate([
-                    { transform: 'scale(0)', opacity: 0},
-                    { transform: 'scale(1)', opacity: 1}
+                    { transform: 'scale(0)', opacity: 0, pointerEvents: 'none'},
+                    { transform: 'scale(1)', opacity: 1, pointerEvents: 'auto'},
                 ], {
                     duration: time,
                     fill: 'forwards'
@@ -134,6 +133,56 @@ export  const challangePresentation = async (refMyPick,refComputerPick,refResult
         const rightSide = await computerPick(500)
         const showResult = await result(500)
         const tryAgainButton = await btnRestart(500)
-        //const addPoint = await point();
     }
 
+/* Generate the random number in range 1-5 */ 
+const generateNumber = () => {
+    return Math.round(Math.random() * (5 - 1) + 1)
+}
+
+/* Logic of the game */
+const logic = (yourPick) => {
+        let computerPick = generateNumber()
+        let result = ''
+
+        /* Computer pick - explanation
+           1-lizard, 2-scissors, 3-rock, 4-spock, 5-paper 
+        */
+
+        if(yourPick.includes('lizard-icon') && computerPick === 4)  { result = 'You Win!' } 
+        if(yourPick.includes('lizard-icon') && computerPick === 5)  { result = 'You Win!' }
+        if(yourPick.includes('lizard-icon') && computerPick === 3)  { result = 'You Lose!'}
+        if(yourPick.includes('lizard-icon') && computerPick === 2)  { result = 'You Lose!' }
+        if(yourPick.includes('lizard-icon') && computerPick === 1)  { result = `Draw!`} 
+    
+        if(yourPick.includes('spock-icon') && computerPick === 4)  { result = 'Draw!' } 
+        if(yourPick.includes('spock-icon') && computerPick === 5)  { result = 'You Lose!' }
+        if(yourPick.includes('spock-icon') && computerPick === 3)  { result = 'You Win!'}
+        if(yourPick.includes('spock-icon') && computerPick === 2)  { result = 'You Win!' }
+        if(yourPick.includes('spock-icon') && computerPick === 1)  { result = `You Lose!`} 
+    
+        if(yourPick.includes('scissors-icon') && computerPick === 4)  { result = 'You Lose!' } 
+        if(yourPick.includes('scissors-icon') && computerPick === 5)  { result = 'You Win!' }
+        if(yourPick.includes('scissors-icon') && computerPick === 3)  { result = 'You Lose!'}
+        if(yourPick.includes('scissors-icon') && computerPick === 2)  { result = 'Draw!' }
+        if(yourPick.includes('scissors-icon') && computerPick === 1)  { result = `You Win!`}
+        
+        if(yourPick.includes('rock-icon') && computerPick === 4)  { result = 'You Lose!' } 
+        if(yourPick.includes('rock-icon') && computerPick === 5)  { result = 'You Lose!' }
+        if(yourPick.includes('rock-icon') && computerPick === 3)  { result = 'Draw!'}
+        if(yourPick.includes('rock-icon') && computerPick === 2)  { result = 'You Win!' }
+        if(yourPick.includes('rock-icon') && computerPick === 1)  { result = `You Win!`} 
+        
+        if(yourPick.includes('paper-icon') && computerPick === 4)  { result = 'You Win!' } 
+        if(yourPick.includes('paper-icon') && computerPick === 5)  { result = 'Draw!' }
+        if(yourPick.includes('paper-icon') && computerPick === 3)  { result = 'You Win!'}
+        if(yourPick.includes('paper-icon') && computerPick === 2)  { result = 'You Lose!' }
+        if(yourPick.includes('paper-icon') && computerPick === 1)  { result = `You Lose!`} 
+
+        return{
+            computerPick,
+            result
+        }
+    }
+
+export default logic

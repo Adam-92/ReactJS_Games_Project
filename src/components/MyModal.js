@@ -2,7 +2,7 @@ import {Modal,Button} from 'react-bootstrap'
 import {ReactComponent as ImageRulesBonus} from '../images/ImageRulesBonus.svg'
 
 /* Explain the rules - Modal */
-const MyModal = ( props) => {
+const MyModal = ( props ) => {
 
     return(
         <Modal {...props} size="lg" aria-labelledby='contained-modal-title-vcenter' centered>

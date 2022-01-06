@@ -1,7 +1,7 @@
-import React, { useState, useEffect} from 'react'
+import { useState, useEffect} from 'react'
 import {Row,Col} from 'react-bootstrap'
 
-const ResultTable = ( {result}) =>  {
+const ResultTable = ( {result} ) =>  {
 
     /* Points */
     const [points, setPoints] = useState(0)
@@ -12,7 +12,11 @@ const ResultTable = ( {result}) =>  {
     }
 
     useEffect(()=> {
-      addPoints(result)
+       if(result === 'You Win!'){
+         setTimeout(()=>{
+          addPoints(result)
+         },2000)
+       }
     }, [result])
 ;
     return (
